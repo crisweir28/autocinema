@@ -118,7 +118,7 @@ h3 {
 
 .combo-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(255, 158, 52, 0.3);
+    box-shadow: 10px 50px 30px rgba(255, 158, 52, 0.3);
     border-color: rgba(255, 158, 52, 0.5);
 }
 
@@ -128,7 +128,7 @@ h3 {
     top: 0;
     left: 0;
     right: 0;
-    height: 5px;
+    height: 20px;
     background: linear-gradient(to right, #ff9e34, #ff774f, #ff4e76);
 }
 
@@ -153,7 +153,7 @@ h3 {
 
 .combo-items {
     list-style: none;
-    padding: 0;
+    padding: 25px;
 }
 
 .combo-items li {
