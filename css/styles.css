@@ -5,19 +5,23 @@
     box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
-    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    background: linear-gradient(to right top, #ff9e34, #ff774f, #ff4e76, #ff35a5, #d043d3, #b54be3, #9255f2, #5d5eff, #7d57ff, #9a4dff, #b53eff, #cf25ff);
     color: #fff;
+    min-height: 100vh;
 }
 
 /* Estilos del Header */
 header {
-    background: linear-gradient(to right, #1a1a1a, #2d2d2d);
+    background: rgba(0, 0, 0, 0.8);
     padding: 1.5rem 0;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    border-bottom: 2px solid #d4af37;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
 }
 
 .header-container,
@@ -35,26 +39,29 @@ header {
 }
 
 .logo {
+    font-family: 'Orbitron', sans-serif;
     font-size: 2.5rem;
     font-weight: 800;
-    color: #d4af37;
+    background: linear-gradient(to right top, #ff9e34, #ff774f, #ff4e76, #ff35a5, #d043d3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-decoration: none;
     transition: all 0.3s ease;
-    text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
 .logo:hover {
     transform: scale(1.05);
-    color: #ffd700;
-    text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+    filter: brightness(1.2);
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
 }
 
 /* Estilos de la Navegación */
 nav {
-    background: rgba(26, 26, 26, 0.95);
+    background: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(10px);
     padding: 1rem 0;
-    border-bottom: 1px solid #d4af37;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .nav-list {
@@ -72,15 +79,15 @@ nav {
     padding: 0.7rem 1.5rem;
     border-radius: 25px;
     transition: all 0.3s ease;
-    background: rgba(212, 175, 55, 0.1);
-    border: 1px solid rgba(212, 175, 55, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .nav-list li a:hover {
-    background: #d4af37;
-    color: #1a1a1a;
+    background: linear-gradient(to right top, #ff9e34, #ff774f, #ff4e76);
+    color: #fff;
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+    box-shadow: 0 4px 15px rgba(255, 158, 52, 0.4);
 }
 
 /* Estilos para el contenido principal */
@@ -92,13 +99,13 @@ main {
 
 /* Estilos para secciones */
 section {
-    background: rgba(26, 26, 26, 0.95);
+    background: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(10px);
     padding: 2.5rem;
     margin-bottom: 2rem;
     border-radius: 20px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(212, 175, 55, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Estilos para títulos */
@@ -111,25 +118,51 @@ h3 {
 }
 
 h1 {
-    font-size: 4rem;
-    font-weight: 800;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 5rem;
+    font-weight: 900;
     text-transform: uppercase;
-    letter-spacing: 4px;
+    letter-spacing: 8px;
     text-align: center;
-    background: linear-gradient(45deg, #d4af37, #ffd700, #d4af37);
+    background: linear-gradient(to right top, #ff9e34, #ff774f, #ff4e76, #ff35a5, #d043d3, #b54be3, #9255f2, #5d5eff);
     background-size: 200% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: shine 3s linear infinite;
+    margin: 3rem 0;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+    position: relative;
+}
+
+h1::before,
+h1::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 4px;
+    background: linear-gradient(to right, #ff9e34, #ff774f, #ff4e76);
+    border-radius: 2px;
+}
+
+h1::before {
+    top: -20px;
+}
+
+h1::after {
+    bottom: -20px;
 }
 
 h2 {
+    font-family: 'Orbitron', sans-serif;
     font-size: 2.5rem;
-    color: #d4af37;
+    color: #fff;
     text-align: center;
     margin: 2rem auto;
     position: relative;
     padding: 0 1rem;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
 h2::after {
@@ -140,7 +173,7 @@ h2::after {
     transform: translateX(-50%);
     width: 60px;
     height: 3px;
-    background: linear-gradient(to right, #d4af37, #ffd700);
+    background: linear-gradient(to right, #ff9e34, #ff774f);
     border-radius: 2px;
 }
 
@@ -153,8 +186,8 @@ h3 {
 .btn {
     display: inline-block;
     padding: 1rem 2rem;
-    background: linear-gradient(to right, #d4af37, #ffd700);
-    color: #1a1a1a;
+    background: linear-gradient(to right top, #ff9e34, #ff774f, #ff4e76);
+    color: #fff;
     text-decoration: none;
     border-radius: 30px;
     transition: all 0.3s ease;
@@ -163,22 +196,23 @@ h3 {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
-    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+    box-shadow: 0 4px 15px rgba(255, 158, 52, 0.3);
 }
 
 .btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
-    background: linear-gradient(to right, #ffd700, #d4af37);
+    box-shadow: 0 6px 20px rgba(255, 158, 52, 0.4);
+    background: linear-gradient(to right top, #ff774f, #ff4e76, #ff35a5);
 }
 
 /* Estilos para el footer */
 footer {
-    background: linear-gradient(to right, #1a1a1a, #2d2d2d);
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
     color: white;
     padding: 3rem 0;
     margin-top: 4rem;
-    border-top: 2px solid #d4af37;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-container {
@@ -219,10 +253,7 @@ footer {
     left: -100%;
     width: 50%;
     height: 100%;
-    background: linear-gradient(to right,
-            transparent,
-            rgba(255, 255, 255, 0.2),
-            transparent);
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
     transform: skewX(-25deg);
     animation: shine 3s infinite;
 }
@@ -320,17 +351,17 @@ footer {
 
 @keyframes glow {
     0% {
-        box-shadow: 0 0 5px rgba(212, 175, 55, 0.5),
-            0 0 10px rgba(212, 175, 55, 0.3);
+        box-shadow: 0 0 5px rgba(255, 158, 52, 0.5),
+            0 0 10px rgba(255, 158, 52, 0.3);
     }
 
     50% {
-        box-shadow: 0 0 20px rgba(212, 175, 55, 0.8),
-            0 0 30px rgba(212, 175, 55, 0.5);
+        box-shadow: 0 0 20px rgba(255, 158, 52, 0.8),
+            0 0 30px rgba(255, 158, 52, 0.5);
     }
 
     100% {
-        box-shadow: 0 0 5px rgba(212, 175, 55, 0.5),
-            0 0 10px rgba(212, 175, 55, 0.3);
+        box-shadow: 0 0 5px rgba(255, 158, 52, 0.5),
+            0 0 10px rgba(255, 158, 52, 0.3);
     }
 }
