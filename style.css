@@ -1,0 +1,51 @@
+.tarjeta-blair{
+    background-color:blue;
+    border: 10px solid black;
+    padding: 20px 25px;
+    margin: auto;
+    color: white;
+    width:  400px;
+    border-radius: 15px;
+    box-shadow: 3px 3px red;
+    background-image: url("blair.png");
+    background-position: center center;
+    width: 500px;
+    height: 500px;
+    font-size: 125% ;
+    text-align: center;
+}
+
+
+ .tarjeta-titanic{
+  background-color:blue;
+  border: 10px solid black;
+  padding: 20px 25px;
+  margin: auto;
+  color: #06fae6;
+  border-radius: 15px;
+  box-shadow: 3px 3px red;
+  background-image: url("Titanic.jpg");
+  background-position: center center;
+  width: 500px;
+  height: 500px;
+  font-size: 130% ;
+  text-align: center;
+}
+
+
+.tarjeta-star{
+  background-color:blue;
+  border: 10px solid black;
+  padding: 20px 25px;
+  margin: auto;
+  color: white;
+  width:  400px;
+  border-radius: 15px;
+  box-shadow: 3px 3px red;
+  background-image: url("starwars.jpeg");
+  background-position: center center;
+  width: 500px;
+  height: 500px;
+  font-size: 130% ;
+  text-align: center;
+}
